@@ -1,0 +1,31 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "\"To-Do-List for everyday use\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raurosaur/to-do-list.git"
+  },
+  "author": "raurosaur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raurosaur/to-do-list/issues"
+  },
+  "homepage": "https://github.com/raurosaur/to-do-list#readme",
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "sass": "^1.32.4",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.13.0",
+    "webpack-cli": "^4.3.1"
+  },
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

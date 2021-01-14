@@ -1,0 +1,220 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body{
+    margin: 0px;
+    background: $lighter-blue;
+    color: #FFF;
+}
+
+#parent-container{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto', serif;
+}
+.sidebar{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: $sidebar-width;
+    background-color: $darker-blue;
+    text-align: center;
+
+    .controls{
+        display: flex;
+        justify-content: space-around;
+        font-size: 2rem;
+        height: 10%;
+        cursor: pointer;
+
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 900;
+            height: 4rem;
+            width: 50%;
+            margin: 20px;
+            border-radius: 30px;
+            box-shadow: 0px 0px 5px 2px $lighter-blue;
+        }
+        div:hover{
+            transform: scale(1.1);
+            box-shadow: 0px 0px 20px 5px $darkest-blue;
+            background-color: $lighter-blue;
+            color: $darkest-blue;
+        }
+    }
+    .lists{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: flex-start;
+        text-align: left;
+        font-size: 20px;
+        margin-top: 30px;
+        div{
+            width: 95%;
+            height: 30px;
+            padding-left: 5%;
+            cursor: pointer;
+        }
+
+        div:hover{
+            background-color: $darkest-blue;
+        }
+    }
+
+}
+
+.list-display{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    min-height: 200vh;
+    height: auto;
+    width: 100vw - $sidebar-width;
+    margin-left: $sidebar-width;
+    background-color: $lighter-blue;
+    color: $darkest-blue;
+    overflow: auto;
+    opacity: 100%;
+    transition: opacity 500 ease-out;
+
+    .add{
+        position: fixed;
+        right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 900;
+        height: 4rem;
+        width: 6rem;
+        font-size: 3rem;
+        margin: 20px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 3px 2px $darker-blue;
+        background-color: inherit;
+        cursor: pointer;
+    }
+
+    .add:hover{
+        transform: scale(1.1);
+        box-shadow: 0px 0px 1px 5px $darkest-blue;
+        background-color: $darker-blue;
+        color: $lighter-blue;
+    }
+
+    .to-do{
+        display: flex;
+        flex-direction: column;
+        height: 20%;
+        width: 80%;
+        border: 3px solid $darker-blue;
+        margin-top: 5%;
+        border-radius: 40px;
+        margin-left: 6rem;
+
+        header{
+            display: flex;
+            justify-content: space-between;
+
+            h2{
+                margin-left: 1rem;
+                font-size: 2.5rem;
+            }
+            .checkbox{
+                border: 2px solid black;
+                height: 2rem;
+                width: 2rem;
+                margin-top: 2.5rem;
+                margin-right: 2rem;
+            }
+            .blue{
+                background-color: $darkest-blue;
+            }
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            div{
+                margin: 0rem 0rem 3rem 2rem;
+            }
+            table{
+                display: inline;
+            }
+            th, td{
+                width: 20rem;
+                border: 1px solid black;
+                text-align: center;
+            }
+        }
+
+    }
+    
+}
+
+.display-none{
+    opacity: 0;
+    display: none;
+}
+
+form{
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: $darker-blue;
+    height: 70vh;
+    width: 60vh;
+    box-shadow: 0px 0px 50vmax 40vmax $darkest-blue;
+}
+
+.form-container{
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+
+    .form{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+        width: 35%;
+        background-color: $lighter-blue;
+        border-radius: 30px;
+
+        .close{
+            position: relative;
+            margin-left: auto;
+            top: -35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 1em;
+            width: 1em;
+            color: $darkest-blue;
+            font-size: 50px;
+            transform: rotate(45deg);
+            cursor: pointer;
+        }
+
+        .close:hover{
+            transform: scale(1.3) rotate(45deg);
+        }
+
+        .form-content{
+            height: 80%;
+            width: 80%;
+        }
+    }
+}
