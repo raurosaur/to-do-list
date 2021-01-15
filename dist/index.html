@@ -20,12 +20,32 @@
             </div>
         </div>
     </div>
-    <!-- <div class = 'form-container' style  = 'display: flex'>
+    <div class = 'form-container display-none'>
         <div class = 'form'>
             <div class = "close">+</div>
-            <div class = 'form-content'></div>
+            <div class = 'form-content'>
+                <label for = 'name'>Project Name</label><br>
+                <input type = 'text' name="name" id = 'name' placeholder="Project Name">
+            </div>
+            <button>Submit</button>
         </div>
-    </div>  -->
+    </div> 
+    <div class='form-container display-none'>
+        <div class='form'>
+            <div class="close">+</div>
+            <div class='form-content'>
+                <label for = 'task-name'>Name</label> <br>
+                <input name = 'name' id = 'task-name' type = 'text'><br>
+                <label for = 'description'>Description</label><br>
+                <input name = 'description' id = 'description' type = 'text'><br>
+                <label for = 'date'>Date</label> <br>
+                <input name = 'date' id = 'date' type = 'date'><br>
+                <label for = 'time'>Time</label><br>
+                <input name = 'time' id = 'time' type = 'time'>
+            </div>
+            <button>Submit</button>
+        </div>
+    </div>
 </body>
 <script src = 'main.js'></script>
 </html>
